@@ -6,7 +6,7 @@ from langchain_text_splitters import RecursiveCharacterTextSplitter
 # 1. Load and chunk documents
 loader = PyPDFLoader("./italy_travel.pdf")
 documents = loader.load()
-text_splitter = RecursiveCharacterTextSplitter(chunk_size = 2000, chunk_overlap = 300)
+text_splitter = RecursiveCharacterTextSplitter(chunk_size = 1500, chunk_overlap = 200)
 documents = text_splitter.split_documents(documents)
 
 # 2. Convert to vectors:
